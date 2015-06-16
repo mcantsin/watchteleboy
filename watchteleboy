@@ -318,6 +318,7 @@ $quiet || echo -n "receive channel list..."
 URL="http://www.teleboy.ch/programm/?program_date=live"
 stationlistraw="$(
   wget --output-document - \
+    --load-cookies ${TMPPATH}/cookie1 \
     --user-agent "$UAGENT" \
     --quiet $URL | \
     grep "<tr class=\"playable\">"  | \
@@ -431,7 +432,7 @@ function set_rtmpparams_by_cids {
     --output-document - \
     --load-cookies ${TMPPATH}/cookie1 \
     $URL )"
-  rtmpparamstring=$(echo -e "$rtmpparamjson" | cut -d'"' -f12 | sed -e 's|\\||g')
+  rtmpparamstring=$(echo -e "$rtmpparamjson" | cut -d'"' -f16 | sed -e 's|\\||g')
   OIFS=$IFS
   IFS="|"
   rtmpparams=($rtmpparamstring)
