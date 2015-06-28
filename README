@@ -5,6 +5,15 @@ watchteleboy
 is a script to watch and record live TV streams from 
 http://www.teleboy.ch without browser nor flash.
 
+IMPORTANT NOTICE:
+
+As of late June 2015, Teleboy AG reworked their service and watchteleboy is
+not functional anymore. It appears they switched from RTMP to HTTP as
+transport protocol. Their service needs to be reverse-engineered again in
+order to provide a functional script. My skills and time are limited, 
+so please do not expect a working version soon. Any help is greatly
+appreciated.
+
 The service was reverse-engineered  by:
 Alexander Tuchaček
 
@@ -13,7 +22,7 @@ FROM TELEBOY.CH IS ONLY AVAILABLE TO SWISS IP ADDRESSES.
 
 see: http://github.com/reduzent/watchteleboy
 
-Copyright: Roman Haefeli, 2011 - 2012
+Copyright: Roman Haefeli, 2011 - 2015
            Doma Smoljo, 2012
            Alexander Tuchaček, 2011
 
